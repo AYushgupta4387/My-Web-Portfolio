@@ -1,0 +1,33 @@
+// Typography basically means all the properties related to general and specific h1, h2, h3... and p.
+
+.heading-primary {
+    font-weight: $fw-bold;
+    font-size: 7rem;
+
+    &--about-me {
+        color: $clr-2;
+        margin-bottom: 3rem;
+    }
+
+    &--my-projects {
+        color: $clr-3;
+    }
+}
+
+.heading-secondary {
+    font-size: 4rem;
+
+    &--cool-about-me {
+        color: $clr-2-1;
+    }
+}
+
+.paragraph {
+    &--my-projects {
+        text-align: justify;
+    }
+
+    &--contact-me {
+        text-align: justify;
+    }
+}

@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%; 
+    // This defines what 1rem is
+    // = 10px; This is 62.5% of default font-size of the browser which usually is 16px
+}
+
+body {
+    background-color: $clr-black;
+    font-family: $ff-primary;
+    font-size: $fs-body;
+    color: $clr-white;
+}
+
+

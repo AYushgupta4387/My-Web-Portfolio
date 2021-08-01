@@ -1,0 +1,58 @@
+.navigation {
+    padding: 3rem;
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: white;
+        font-weight: $fw-reg;
+        padding: 0.5rem 1rem;
+        font-size: 3rem;
+
+        &:link,
+        &:visited {
+            margin: 0 1rem;
+            border-radius: 1rem;
+            color: #000;
+            box-shadow: 0 0.5rem #fff;
+        }
+
+        &:hover {
+            box-shadow: 0 0.3rem #fff;
+            transform: translateY(0.2rem);
+        }
+
+        &:active {
+            box-shadow: 0 0 #fff;
+            transform: translateY(0.3rem);
+        }
+
+        &--about {
+            background-color: $clr-2;
+        }
+        
+        &--projects {
+            background-color: $clr-3;
+        }
+
+        &--contact {
+            background-color: $clr-1;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav__link {
+        margin: 1rem 0;
+    }
+}

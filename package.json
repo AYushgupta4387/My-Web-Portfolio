@@ -1,0 +1,14 @@
+{
+  "name": "mini_project_1_web_portfolio",
+  "version": "1.0.0",
+  "description": "My Portfolio project for QSTP. This is project 1",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w" 
+  },
+  "author": "Ayush Gupta",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

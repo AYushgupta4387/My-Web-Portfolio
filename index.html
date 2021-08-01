@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AYush | Portfolio</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,700;1,400&display=swap" rel="stylesheet"/>
+
+        <!-- Personal CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!-- Navigation -->
+		<!-- Here navigation is made as a different section and not included in the header beacause I will treat it as a layout file just like header -->
+        <div class="navigation">
+            <nav class="navigation__nav">
+                <a href="#about-me" class="navigation__link navigation__link--about">About Me</a>
+                <a href="#my-projects" class="navigation__link navigation__link--projects">My Projects</a>
+                <a href="#contact-me" class="navigation__link navigation__link--contact">Contact Me</a>
+            </nav>
+		</div>
+
+        <!-- About Me -->
+        <section class="about-me" id="about-me">
+            <h1 class="heading-primary heading-primary--about-me">About Me</h1>
+
+            <div class="about-me__container">
+                <div class="about-me__image-container">
+                    <img src="images/image-1.svg" alt="" class="about-me__image" />
+                </div>
+
+                <div class="cool-about-me">
+
+                    <div class="cool-about-me__text-container">
+                        <div class="cool-about-me__circle cool-about-me__circle--1"></div>
+                        <div class="u-flex-center">
+                            <h2 class="heading-secondary heading-secondary--cool-about-me">Education</h2>
+                        </div>
+                        <div class="cool-about-me__text-box">
+                            <ul class="cool-about-me__list">
+                                <li class="cool-about-me__text">1st School - The Sanskaar Valley School,Bhopal</li>
+                                <li class="cool-about-me__text">2nd School - GVN The Global School, Bhopal</li>
+                                <li class="cool-about-me__text">College - BITS Pilani Goa Campus</li>
+                            </ul>
+                        </div> <!-- /cool-about-me__text -->
+                    </div> <!-- /cool-about-me__text-container -->
+
+                    <div class="cool-about-me__text-container">
+                        <div class="cool-about-me__circle cool-about-me__circle--1"></div>
+                        <div class="u-flex-center">
+                            <h2 class="heading-secondary heading-secondary--cool-about-me">Hobbies</h2>
+                        </div>
+                        <div class="cool-about-me__text-box">
+                            <ul>
+                                <li class="cool-about-me__text">Weight Lifting</li>
+                                <li class="cool-about-me__text">Searching for new music</li>
+                                <li class="cool-about-me__text">Beat-containering</li>
+                            </ul>
+                        </div> <!-- /cool-about-me__text -->
+                    </div> <!-- /cool-about-me__text-container -->
+
+                    <div class="cool-about-me__text-container">
+                        <div class="cool-about-me__circle cool-about-me__circle--2"></div>
+                        <div class="u-flex-center">
+                            <h2 class="heading-secondary heading-secondary--cool-about-me">Interests</h2>
+                        </div>
+                        <div class="cool-about-me__text-box">
+                            <ul>
+                                <li class="cool-about-me__text">Web-Development</li>
+                                <li class="cool-about-me__text">Working towards environment protection</li>
+                            </ul>
+                        </div> <!-- /cool-about-me__text -->
+                    </div> <!-- /cool-about-me__text-container -->
+
+                </div> <!-- cool-about-me -->
+            </div> <!-- /text-container -->
+        </section> <!-- /section__container section__container--about-us-->
+
+        <!-- My Projects -->
+        <section class="my-projects u-margin-top-large" id="my-projects">
+            <h1 class="heading-primary heading-primary--my-projects u-margin-bottom-medium">My Projects</h1>
+            <div class="my-projects__container">
+
+                <div class="my-projects__project">
+                    <div class="my-projects__image-container">
+                        <img src="images/project-image-1.svg" class="my-projects__image" alt="">
+                    </div>
+                    <div class="my-projects__text-container">
+                        <div class="u-text-center u-margin-bottom-medium">
+                            <h2 class="heading-secondary heading-secondary--my-projects">Hashtag Generator</h2>
+                        </div>
+                        <p class="paragraph paragraph--my-projects">
+                            This was my first ever project, I used it to
+                            generate random 30 hashtags from a pool of 90 hand-picked
+                            hashtags that I had selected individually.
+                        </p>
+                        <div class="u-text-center u-margin-top-medium">
+                            <a href="https://github.com/AYushgupta4387/Hashtag-Generator" target="_blank" class="btn btn--hg">Check it out!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my-projects__project">
+                    <div class="my-projects__text-container">
+                        <div class="u-text-center u-margin-bottom-medium">
+                            <h2 class="heading-secondary heading-secondary--my-projects">Learn and Grow (Design)</h2>
+                        </div>
+                        <p class="paragraph paragraph--my-projects u-margin-bottom-small">
+                            This is my first freelance project about an organization that provides online 1-1 tutor sessions. I am currently working on this project along with a friend, only the design part is complete.  
+                        </p>
+                        <p class="paragraph paragraph--my-project">
+                            Although it's very messy as it was my first try at Figma, you can still check it out.
+                        </p>
+                        <div class="u-text-center u-margin-top-medium">
+                            <p class="paragraph paragraph--my-projects"><a href="#contact-me" class="btn btn--landg">Contact me </a>to check out it's design.</p>
+                        </div>
+                    </div>
+                    <div class="my-projects__image-container">
+                        <img src="images/project-image-2.svg" class="my-projects__image" alt="">
+                    </div>
+                </div>
+
+            </div> <!-- /my-projects__container -->
+        </section>
+
+        <!-- Contact Me -->
+        <section class="contact-me u-margin-top-large" id="contact-me">
+            <div class="contact-me__container">
+                <div class="contact-me__text-container">
+                    <h2 class="heading-secondary heading-secondary--contact-me">Hey! I am a very <span class="contact-me__approachable">approachable</span> person.</h2>
+                    <p class="paragraph paragraph--contact-me u-margin-top-small">Feel free to contact me. Maybe we can work together on the <span class="contact-me__approachable">next big thing</span>.</p>
+                </div>
+                <div class="contact-me__form-container">
+                    <form action="">
+                        <input type="text" class="contact-me__fname" placeholder="First Name">
+                        <input type="text" class="contact-me__lname" placeholder="Last Name">
+                        <input type="email" class="contact-me__email" placeholder="Your email">
+                        <textarea class="contact-me__message" placeholder="Your Message" rows="4" cols="50"></textarea>
+                        <input type="submit" class="contact-me__submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
