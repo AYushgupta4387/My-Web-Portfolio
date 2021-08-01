@@ -14,6 +14,10 @@
         padding: 0.5rem 1rem;
         font-size: 3rem;
 
+        @include respond(phone) {
+            font-size: 2rem;
+        }
+
         &:link,
         &:visited {
             margin: 0 1rem;
@@ -43,6 +47,14 @@
         &--contact {
             background-color: $clr-1;
         }
+    }
+
+    @include respond(tab-port) {
+        width: 100%;
+    }
+
+    @include respond(phone) {
+        width: 100%;
     }
 }
 

@@ -6,15 +6,24 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        margin: 1rem;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
     }
 
     &__image-container {
-        margin: 1rem;
+        width: 40%;
+
+        @include respond(tab-port) {
+            width: 60%;
+            margin-bottom: 4rem;
+
+        }
     }
 
     &__image {
-        width: 50rem;
+        max-width: 100%;
         height: auto;
     }
 }
@@ -33,16 +42,35 @@
         justify-content: space-evenly;
         align-items: center;
         margin-bottom: 3rem;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 6rem;
+        }
     }
 
     &__text-container {
-        max-width: 400px;
+        width: 40%;
         text-align: left;
-        margin-left: 5rem;
+
+        @include respond(tab-port) {
+            width: 80%;
+        }
+    }
+
+    &__image-container {
+        width: 30%;
+
+        @include respond(tab-port) {
+            width: 60%;
+        }
     }
 
     &__image {
-        width: 500px;
+        max-width: 100%;
         height: auto;
     }
 }
@@ -52,14 +80,28 @@
     display: flex;
     justify-content: center;
 
+    @include respond(phone) {
+        display: block;
+    }
+
     &__container {
         margin: 3rem;
         display: flex;
         max-width: 100rem;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__text-container {
         max-width: 45rem;
+        margin-bottom: 3rem;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
     }
 
     &__approachable {
@@ -69,6 +111,10 @@
     &__form-container {
         margin: 0 5rem;
         max-width: 55rem;
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     input {

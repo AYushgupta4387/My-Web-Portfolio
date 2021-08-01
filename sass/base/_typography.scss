@@ -4,6 +4,10 @@
     font-weight: $fw-bold;
     font-size: 7rem;
 
+    @include respond(phone) {
+        font-size: 5rem;
+    }
+
     &--about-me {
         color: $clr-2;
         margin-bottom: 3rem;

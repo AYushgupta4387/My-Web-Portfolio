@@ -1,3 +1,20 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid/flex items > page layout > components
+
+Here, we use em instead of rem because rem fail here in their usage. 1em = 16px (usually)
+*/
 *,
 *::after,
 *::before {
@@ -7,6 +24,15 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   background-color: #000;
@@ -17,6 +43,9 @@ body {
 .heading-primary {
   font-weight: 700;
   font-size: 7rem; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-primary {
+      font-size: 5rem; } }
   .heading-primary--about-me {
     color: #b953ff;
     margin-bottom: 3rem; }
@@ -102,18 +131,25 @@ body {
   .cool-about-me__text-container:not(:last-child) {
     padding-bottom: 3rem;
     border-left: 3px solid #faeaa9; }
+    @media only screen and (max-width: 37.5em) {
+      .cool-about-me__text-container:not(:last-child) {
+        padding-bottom: 1rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .cool-about-me__text-container {
+      padding-left: 1rem;
+      margin-left: 3rem; } }
 
 .cool-about-me__circle {
-  height: 40px;
-  width: 40px;
+  height: 4rem;
+  width: 4rem;
   border-radius: 50%;
   background-color: #b953ff;
   position: absolute;
   box-shadow: 0 0.5rem #fff; }
   .cool-about-me__circle--1 {
-    left: -21.5px; }
+    left: -2.15rem; }
   .cool-about-me__circle--2 {
-    left: -18.5px; }
+    left: -1.85rem; }
 
 .cool-about-me__text {
   padding: 0.2rem 0.5rem;
@@ -122,16 +158,9 @@ body {
 
 .cool-about-me__text-box {
   margin: 3rem 0 0 3rem; }
-
-@media (max-width: 900px) {
-  .section__container--about-me {
-    flex-direction: column; }
-  .image-1 {
-    width: 100%;
-    height: auto; }
-  .about-me-text-box {
-    padding-left: 2rem;
-    margin-left: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .cool-about-me__text-box {
+      margin: 2rem 0 0 2rem; } }
 
 .navigation {
   padding: 3rem; }
@@ -145,6 +174,9 @@ body {
     font-weight: 400;
     padding: 0.5rem 1rem;
     font-size: 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .navigation__link {
+        font-size: 2rem; } }
     .navigation__link:link, .navigation__link:visited {
       margin: 0 1rem;
       border-radius: 1rem;
@@ -162,6 +194,12 @@ body {
       background-color: #4452fb; }
     .navigation__link--contact {
       background-color: #16e0bd; }
+  @media only screen and (max-width: 56.25em) {
+    .navigation {
+      width: 100%; } }
+  @media only screen and (max-width: 37.5em) {
+    .navigation {
+      width: 100%; } }
 
 @media (max-width: 500px) {
   header {
@@ -176,12 +214,18 @@ body {
   .about-me__container {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    margin: 1rem; }
+    align-items: center; }
+    @media only screen and (max-width: 56.25em) {
+      .about-me__container {
+        flex-direction: column; } }
   .about-me__image-container {
-    margin: 1rem; }
+    width: 40%; }
+    @media only screen and (max-width: 56.25em) {
+      .about-me__image-container {
+        width: 60%;
+        margin-bottom: 4rem; } }
   .about-me__image {
-    width: 50rem;
+    max-width: 100%;
     height: auto; }
 
 /* My Projects */
@@ -195,29 +239,55 @@ body {
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 3rem; }
+    @media only screen and (max-width: 56.25em) {
+      .my-projects__project {
+        flex-direction: column; } }
+    .my-projects__project:not(:last-child) {
+      margin-bottom: 6rem; }
   .my-projects__text-container {
-    max-width: 400px;
-    text-align: left;
-    margin-left: 5rem; }
+    width: 40%;
+    text-align: left; }
+    @media only screen and (max-width: 56.25em) {
+      .my-projects__text-container {
+        width: 80%; } }
+  .my-projects__image-container {
+    width: 30%; }
+    @media only screen and (max-width: 56.25em) {
+      .my-projects__image-container {
+        width: 60%; } }
   .my-projects__image {
-    width: 500px;
+    max-width: 100%;
     height: auto; }
 
 /* Contact Me */
 .contact-me {
   display: flex;
   justify-content: center; }
+  @media only screen and (max-width: 37.5em) {
+    .contact-me {
+      display: block; } }
   .contact-me__container {
     margin: 3rem;
     display: flex;
     max-width: 100rem; }
+    @media only screen and (max-width: 56.25em) {
+      .contact-me__container {
+        flex-direction: column;
+        align-items: center; } }
   .contact-me__text-container {
-    max-width: 45rem; }
+    max-width: 45rem;
+    margin-bottom: 3rem; }
+    @media only screen and (max-width: 56.25em) {
+      .contact-me__text-container {
+        width: 100%; } }
   .contact-me__approachable {
     color: #16e0bd; }
   .contact-me__form-container {
     margin: 0 5rem;
     max-width: 55rem; }
+    @media only screen and (max-width: 37.5em) {
+      .contact-me__form-container {
+        display: none; } }
   .contact-me input {
     margin: 1rem 1rem;
     display: inline-block;
