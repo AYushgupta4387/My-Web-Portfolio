@@ -176,7 +176,7 @@ body {
     font-size: 3rem; }
     @media only screen and (max-width: 37.5em) {
       .navigation__link {
-        font-size: 2rem; } }
+        font-size: 1.8rem; } }
     .navigation__link:link, .navigation__link:visited {
       margin: 0 1rem;
       border-radius: 1rem;
@@ -269,7 +269,8 @@ body {
   .contact-me__container {
     margin: 3rem;
     display: flex;
-    max-width: 100rem; }
+    max-width: 100rem;
+    align-items: center; }
     @media only screen and (max-width: 56.25em) {
       .contact-me__container {
         flex-direction: column;
@@ -283,19 +284,21 @@ body {
   .contact-me__approachable {
     color: #16e0bd; }
   .contact-me__form-container {
-    margin: 0 5rem;
     max-width: 55rem; }
     @media only screen and (max-width: 37.5em) {
       .contact-me__form-container {
-        display: none; } }
+        max-width: 40rem; } }
   .contact-me input {
-    margin: 1rem 1rem;
+    margin: 1rem;
     display: inline-block;
     padding: 1rem 2rem;
     font-size: 1.6rem;
     border-style: none;
     background-color: #121212;
     color: #fff; }
+    @media only screen and (max-width: 37.5em) {
+      .contact-me input {
+        display: block; } }
   .contact-me textarea {
     margin: 1rem 1rem;
     font-size: 1.6rem;
@@ -304,12 +307,24 @@ body {
     color: #fff;
     border-style: none;
     resize: vertical; }
+    @media only screen and (max-width: 37.5em) {
+      .contact-me textarea {
+        width: 70%; } }
   .contact-me__fname {
     width: 40%; }
+    @media only screen and (max-width: 37.5em) {
+      .contact-me__fname {
+        width: 50%; } }
   .contact-me__lname {
     width: 40%; }
+    @media only screen and (max-width: 37.5em) {
+      .contact-me__lname {
+        width: 50%; } }
   .contact-me__email {
     width: 60%; }
+    @media only screen and (max-width: 37.5em) {
+      .contact-me__email {
+        width: 50%; } }
   .contact-me__message {
     display: block; }
   .contact-me__submit {

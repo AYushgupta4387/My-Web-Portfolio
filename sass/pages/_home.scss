@@ -18,7 +18,6 @@
         @include respond(tab-port) {
             width: 60%;
             margin-bottom: 4rem;
-
         }
     }
 
@@ -88,6 +87,7 @@
         margin: 3rem;
         display: flex;
         max-width: 100rem;
+        align-items: center;
 
         @include respond(tab-port) {
             flex-direction: column;
@@ -109,22 +109,25 @@
     }
 
     &__form-container {
-        margin: 0 5rem;
         max-width: 55rem;
 
         @include respond(phone) {
-            display: none;
+            max-width: 40rem;
         }
     }
 
     input {
-        margin: 1rem 1rem;
+        margin: 1rem;
         display: inline-block;
         padding: 1rem 2rem;
         font-size: 1.6rem;
         border-style: none;
         background-color: $clr-dark-input;
         color: $clr-white;
+
+        @include respond(phone) {
+            display: block;
+        }
     }
 
     textarea {
@@ -135,18 +138,34 @@
         color: $clr-white;
         border-style: none;
         resize: vertical;
+
+        @include respond(phone) {
+            width: 70%;
+        }
     }
 
     &__fname {
-        width: 40%
+        width: 40%;
+
+        @include respond(phone) {
+            width: 50%;
+        }
     }
 
     &__lname {
-        width: 40%
+        width: 40%;
+
+        @include respond(phone) {
+            width: 50%;
+        }
     }
 
     &__email {
-        width: 60%
+        width: 60%;
+
+        @include respond(phone) {
+            width: 50%;
+        }
     }
 
     &__message {
@@ -161,4 +180,3 @@
         font-family: $ff-primary;
     }
 }
-
