@@ -1,7 +1,7 @@
 // Typography basically means all the properties related to general and specific h1, h2, h3... and p.
 
 .heading-primary {
-    //h1
+    // h1
     font-weight: $fw-bold;
     font-size: 7rem;
 
@@ -20,11 +20,26 @@
 }
 
 .heading-secondary {
-    //h2
+    // h2
     font-size: 4rem;
 
     &--cool-about-me {
         color: $clr-2-1;
+    }
+
+    &--contact-me {
+        @include respond(phone) {
+            text-align: center;
+        }
+    }
+}
+
+.heading-tertiary {
+    // h3
+    font-size: 3.5rem;
+
+    &--contact-me {
+        color: $clr-1;
     }
 }
 
@@ -35,5 +50,9 @@
 
     &--contact-me {
         text-align: justify;
+
+        @include respond(phone) {
+            text-align: center;
+        }
     }
 }

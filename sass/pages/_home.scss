@@ -42,12 +42,22 @@
         align-items: center;
         margin-bottom: 3rem;
 
+        &:nth-child(odd) {
+            padding-bottom: 2rem;
+        }
+        
+        &:not(:last-child) {
+            margin-bottom: 6rem;
+        }
+
         @include respond(tab-port) {
             flex-direction: column;
         }
 
-        &:not(:last-child) {
-            margin-bottom: 6rem;
+        @include respond(phone) {
+            margin: 1rem;
+            border: 2px solid $clr-3;
+            border-radius: 2rem;
         }
     }
 
@@ -62,6 +72,7 @@
 
     &__image-container {
         width: 30%;
+        margin: 4rem 0;
 
         @include respond(tab-port) {
             width: 60%;
@@ -81,15 +92,17 @@
 
     @include respond(phone) {
         display: block;
-    }
+    } 
 
     &__container {
-        margin: 3rem;
         display: flex;
-        max-width: 100rem;
+        justify-content: space-around;
+        width: 80%;
         align-items: center;
 
         @include respond(tab-port) {
+            width: 100%;
+            justify-content: center;
             flex-direction: column;
             align-items: center;
         }
@@ -97,26 +110,41 @@
 
     &__text-container {
         max-width: 45rem;
-        margin-bottom: 3rem;
-
-        @include respond(tab-port) {
-            width: 100%;
-        }
+        padding: 0 2rem;
     }
 
     &__approachable {
         color: $clr-1;
     }
 
-    &__form-container {
-        max-width: 55rem;
 
-        @include respond(phone) {
-            max-width: 40rem;
-        }
+
+
+
+
+
+    &__link-container {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    &__icon {
+        color: $clr-white;
+        padding: 1rem;
     }
 
-    input {
+/*
+    /* &__form-container {
+        max-width: 55rem;
+
+        @include respond(tab-port) {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+    } */
+
+    /* input {
         margin: 1rem;
         display: inline-block;
         padding: 1rem 2rem;
@@ -125,12 +153,12 @@
         background-color: $clr-dark-input;
         color: $clr-white;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             display: block;
         }
-    }
+    } */
 
-    textarea {
+    /* textarea {
         margin: 1rem 1rem;
         font-size: 1.6rem;
         padding: 1rem 2rem;
@@ -139,44 +167,46 @@
         border-style: none;
         resize: vertical;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             width: 70%;
+            display: inline-block;
         }
-    }
+    } */
 
-    &__fname {
+    /* &__fname {
         width: 40%;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             width: 50%;
         }
-    }
+    } */
 
-    &__lname {
+    /* &__lname {
         width: 40%;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             width: 50%;
         }
-    }
+    } */
 
-    &__email {
+    /* &__email {
         width: 60%;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             width: 50%;
         }
-    }
+    } */
 
-    &__message {
+    /* &__message {
         display: block;
-    }
+    } */
 
-    &__submit {
+    /* &__submit {
         cursor: pointer;
         background-color: $clr-1 !important;
         color: $clr-black !important;
         border-radius: 0.5rem;
         font-family: $ff-primary;
-    }
+    } 
+*/
 }

@@ -56,12 +56,23 @@ body {
   font-size: 4rem; }
   .heading-secondary--cool-about-me {
     color: #faeaa9; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary--contact-me {
+      text-align: center; } }
+
+.heading-tertiary {
+  font-size: 3.5rem; }
+  .heading-tertiary--contact-me {
+    color: #16e0bd; }
 
 .paragraph--my-projects {
   text-align: justify; }
 
 .paragraph--contact-me {
   text-align: justify; }
+  @media only screen and (max-width: 37.5em) {
+    .paragraph--contact-me {
+      text-align: center; } }
 
 .u-text-center {
   text-align: center; }
@@ -239,11 +250,18 @@ body {
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 3rem; }
+    .my-projects__project:nth-child(odd) {
+      padding-bottom: 2rem; }
+    .my-projects__project:not(:last-child) {
+      margin-bottom: 6rem; }
     @media only screen and (max-width: 56.25em) {
       .my-projects__project {
         flex-direction: column; } }
-    .my-projects__project:not(:last-child) {
-      margin-bottom: 6rem; }
+    @media only screen and (max-width: 37.5em) {
+      .my-projects__project {
+        margin: 1rem;
+        border: 2px solid #4452fb;
+        border-radius: 2rem; } }
   .my-projects__text-container {
     width: 40%;
     text-align: left; }
@@ -251,7 +269,8 @@ body {
       .my-projects__text-container {
         width: 80%; } }
   .my-projects__image-container {
-    width: 30%; }
+    width: 30%;
+    margin: 4rem 0; }
     @media only screen and (max-width: 56.25em) {
       .my-projects__image-container {
         width: 60%; } }
@@ -262,74 +281,98 @@ body {
 /* Contact Me */
 .contact-me {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  /*
+    /* &__form-container {
+        max-width: 55rem;
+
+        @include respond(tab-port) {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+    } */
+  /* input {
+        margin: 1rem;
+        display: inline-block;
+        padding: 1rem 2rem;
+        font-size: 1.6rem;
+        border-style: none;
+        background-color: $clr-dark-input;
+        color: $clr-white;
+
+        @include respond(tab-port) {
+            display: block;
+        }
+    } */
+  /* textarea {
+        margin: 1rem 1rem;
+        font-size: 1.6rem;
+        padding: 1rem 2rem;
+        background-color: $clr-dark-input;
+        color: $clr-white;
+        border-style: none;
+        resize: vertical;
+
+        @include respond(tab-port) {
+            width: 70%;
+            display: inline-block;
+        }
+    } */
+  /* &__fname {
+        width: 40%;
+
+        @include respond(tab-port) {
+            width: 50%;
+        }
+    } */
+  /* &__lname {
+        width: 40%;
+
+        @include respond(tab-port) {
+            width: 50%;
+        }
+    } */
+  /* &__email {
+        width: 60%;
+
+        @include respond(tab-port) {
+            width: 50%;
+        }
+    } */
+  /* &__message {
+        display: block;
+    } */
+  /* &__submit {
+        cursor: pointer;
+        background-color: $clr-1 !important;
+        color: $clr-black !important;
+        border-radius: 0.5rem;
+        font-family: $ff-primary;
+    } 
+*/ }
   @media only screen and (max-width: 37.5em) {
     .contact-me {
       display: block; } }
   .contact-me__container {
-    margin: 3rem;
     display: flex;
-    max-width: 100rem;
+    justify-content: space-around;
+    width: 80%;
     align-items: center; }
     @media only screen and (max-width: 56.25em) {
       .contact-me__container {
+        width: 100%;
+        justify-content: center;
         flex-direction: column;
         align-items: center; } }
   .contact-me__text-container {
     max-width: 45rem;
-    margin-bottom: 3rem; }
-    @media only screen and (max-width: 56.25em) {
-      .contact-me__text-container {
-        width: 100%; } }
+    padding: 0 2rem; }
   .contact-me__approachable {
     color: #16e0bd; }
-  .contact-me__form-container {
-    max-width: 55rem; }
-    @media only screen and (max-width: 37.5em) {
-      .contact-me__form-container {
-        max-width: 40rem; } }
-  .contact-me input {
-    margin: 1rem;
-    display: inline-block;
-    padding: 1rem 2rem;
-    font-size: 1.6rem;
-    border-style: none;
-    background-color: #121212;
-    color: #fff; }
-    @media only screen and (max-width: 37.5em) {
-      .contact-me input {
-        display: block; } }
-  .contact-me textarea {
-    margin: 1rem 1rem;
-    font-size: 1.6rem;
-    padding: 1rem 2rem;
-    background-color: #121212;
+  .contact-me__link-container {
+    display: flex;
+    justify-content: space-around; }
+  .contact-me__icon {
     color: #fff;
-    border-style: none;
-    resize: vertical; }
-    @media only screen and (max-width: 37.5em) {
-      .contact-me textarea {
-        width: 70%; } }
-  .contact-me__fname {
-    width: 40%; }
-    @media only screen and (max-width: 37.5em) {
-      .contact-me__fname {
-        width: 50%; } }
-  .contact-me__lname {
-    width: 40%; }
-    @media only screen and (max-width: 37.5em) {
-      .contact-me__lname {
-        width: 50%; } }
-  .contact-me__email {
-    width: 60%; }
-    @media only screen and (max-width: 37.5em) {
-      .contact-me__email {
-        width: 50%; } }
-  .contact-me__message {
-    display: block; }
-  .contact-me__submit {
-    cursor: pointer;
-    background-color: #16e0bd !important;
-    color: #000 !important;
-    border-radius: 0.5rem;
-    font-family: "Source Sans Pro", sans-serif; }
+    padding: 1rem; }
