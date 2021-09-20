@@ -182,6 +182,15 @@ body {
     .cool-about-me__text-box {
       margin: 2rem 0 0 2rem; } }
 
+.cool-about-me__clr-advanced {
+  color: #16e0bd; }
+
+.cool-about-me__clr-intermediate {
+  color: #4452fb; }
+
+.cool-about-me__clr-beginner {
+  color: #b953ff; }
+
 .header {
   position: relative;
   padding: 3rem;

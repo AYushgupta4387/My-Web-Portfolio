@@ -51,5 +51,17 @@
             margin: 2rem 0 0 2rem;
         }
     }
+
+    &__clr-advanced {
+        color: $clr-1;
+    }
+
+    &__clr-intermediate {
+        color: $clr-3;
+    }
+
+    &__clr-beginner {
+        color: $clr-2;
+    }
 }
 
