@@ -1,10 +1,12 @@
-.navigation {
+.header {
+    position: relative;
     padding: 3rem;
+    height: 100vh;
 
+    // Navigation
     &__nav {
         display: flex;
         justify-content: center;
-        margin-bottom: 5rem;
     }
 
     &__link {
@@ -39,7 +41,7 @@
         &--about {
             background-color: $clr-2;
         }
-        
+
         &--projects {
             background-color: $clr-3;
         }
@@ -56,15 +58,35 @@
     @include respond(phone) {
         width: 100%;
     }
-}
 
-@media (max-width: 500px) {
-    header {
+    // Rest of Header
+    &__main-container {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .nav__link {
-        margin: 1rem 0;
+    .special-bg {
+        background-image: linear-gradient(90deg, $clr-1, $clr-2);
+        padding: 0 1rem;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+
+        @include respond(phone) {
+            padding: 0;
+        }
+    }
+
+    &__image-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__hero-image {
+        position: absolute;
+        bottom: 3rem;
+        max-width: 90%;
+        height: auto;
     }
 }

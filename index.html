@@ -24,14 +24,28 @@
         <link rel="manifest" href="images/site.webmanifest">
     </head>
     <body>
-        <!-- Navigation -->
-		<!-- Here navigation is made as a different section and not included in the header beacause I will treat it as a layout file just like header -->
-        <div class="navigation">
-            <nav class="navigation__nav">
-                <a href="#about-me" class="navigation__link navigation__link--about">About Me</a>
-                <a href="#my-projects" class="navigation__link navigation__link--projects">My Projects</a>
-                <a href="#contact-me" class="navigation__link navigation__link--contact">Contact Me</a>
+        <!-- header -->
+        <div class="header">
+            <nav class="header__nav u-margin-bottom-large">
+                <a href="#about-me" class="header__link header__link--about">About Me</a>
+                <a href="#my-projects" class="header__link header__link--projects">My Projects</a>
+                <a href="#contact-me" class="header__link header__link--contact">Contact Me</a>
             </nav>
+            <div class="header__main-container">
+                <h1 class="heading-primary heading-primary--header u-margin-bottom-medium">
+                    Hey there! I am <span class="special-bg">Ayush</span>
+                </h1>
+                <p class="paragraph paragraph--header">On a journey to learn fullstack web-development, currently I know front-end technologies.</p>
+                <div class="contact-me__link-container u-margin-top-medium">
+                    <a href="https://instagram.com/just_a__yush?utm_medium=copy_link" target="_blank"><i class="fab fa-instagram instagram-icon contact-me__icon"></i></a>
+                    <a href="https://twitter.com/ayushGupta4387?s=09" target="_blank"><i class="fab fa-twitter twitter-icon contact-me__icon"></i></a>
+                    <a href="https://www.linkedin.com/in/ayush-gupta-62b769197" target="_blank"><i class="fab fa-linkedin linkedin-icon contact-me__icon"></i></a>
+                    <a href="mailto:ayushgupta4387@gmail.com"><i class="far fa-envelope linkedin-icon contact-me__icon"></i></a>
+                </div>
+            </div>
+            <div class="header__image-container">
+                <img src="images/hero.svg" class="header__hero-image" alt="">
+            </div>
 		</div>
 
         <!-- About Me -->
@@ -52,8 +66,7 @@
                         </div>
                         <div class="cool-about-me__text-box">
                             <ul class="cool-about-me__list">
-                                <li class="cool-about-me__text">1st School - The Sanskaar Valley School,Bhopal</li>
-                                <li class="cool-about-me__text">2nd School - GVN The Global School, Bhopal</li>
+                                <li class="cool-about-me__text">School - The Sanskaar Valley School, Bhopal</li>
                                 <li class="cool-about-me__text">College - BITS Pilani Goa Campus</li>
                             </ul>
                         </div> <!-- /cool-about-me__text -->
@@ -62,13 +75,16 @@
                     <div class="cool-about-me__text-container">
                         <div class="cool-about-me__circle cool-about-me__circle--1"></div>
                         <div class="u-flex-center">
-                            <h2 class="heading-secondary heading-secondary--cool-about-me">Hobbies</h2>
+                            <h2 class="heading-secondary heading-secondary--cool-about-me">Tech-Stack</h2>
                         </div>
                         <div class="cool-about-me__text-box">
                             <ul>
-                                <li class="cool-about-me__text">Weight Lifting</li>
-                                <li class="cool-about-me__text">Searching for new music</li>
-                                <li class="cool-about-me__text">Beat-containering</li>
+                                <li class="cool-about-me__text">HTML</li>
+                                <li class="cool-about-me__text">CSS, BootStrap, SASS</li>
+                                <li class="cool-about-me__text">JavaScript</li>
+                                <li class="cool-about-me__text">Figma</li>
+                                <li class="cool-about-me__text">GitHub</li>
+
                             </ul>
                         </div> <!-- /cool-about-me__text -->
                     </div> <!-- /cool-about-me__text-container -->

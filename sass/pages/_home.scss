@@ -45,7 +45,7 @@
         &:nth-child(odd) {
             padding-bottom: 2rem;
         }
-        
+
         &:not(:last-child) {
             margin-bottom: 6rem;
         }
@@ -92,7 +92,7 @@
 
     @include respond(phone) {
         display: block;
-    } 
+    }
 
     &__container {
         display: flex;
@@ -117,23 +117,17 @@
         color: $clr-1;
     }
 
-
-
-
-
-
-
     &__link-container {
         display: flex;
         justify-content: space-around;
     }
-    
+
     &__icon {
         color: $clr-white;
         padding: 1rem;
     }
 
-/*
+    /*
     /* &__form-container {
         max-width: 55rem;
 

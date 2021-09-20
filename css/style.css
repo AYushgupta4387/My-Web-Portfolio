@@ -46,6 +46,9 @@ body {
   @media only screen and (max-width: 37.5em) {
     .heading-primary {
       font-size: 5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-primary--header {
+      text-align: center; } }
   .heading-primary--about-me {
     color: #b953ff;
     margin-bottom: 3rem; }
@@ -64,6 +67,12 @@ body {
   font-size: 3.5rem; }
   .heading-tertiary--contact-me {
     color: #16e0bd; }
+
+.paragraph--header {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  max-width: 50rem;
+  text-align: center; }
 
 .paragraph--my-projects {
   text-align: justify; }
@@ -173,51 +182,66 @@ body {
     .cool-about-me__text-box {
       margin: 2rem 0 0 2rem; } }
 
-.navigation {
-  padding: 3rem; }
-  .navigation__nav {
+.header {
+  position: relative;
+  padding: 3rem;
+  height: 100vh; }
+  .header__nav {
     display: flex;
-    justify-content: center;
-    margin-bottom: 5rem; }
-  .navigation__link {
+    justify-content: center; }
+  .header__link {
     text-decoration: none;
     color: white;
     font-weight: 400;
     padding: 0.5rem 1rem;
     font-size: 3rem; }
     @media only screen and (max-width: 37.5em) {
-      .navigation__link {
+      .header__link {
         font-size: 1.8rem; } }
-    .navigation__link:link, .navigation__link:visited {
+    .header__link:link, .header__link:visited {
       margin: 0 1rem;
       border-radius: 1rem;
       color: #000;
       box-shadow: 0 0.5rem #fff; }
-    .navigation__link:hover {
+    .header__link:hover {
       box-shadow: 0 0.3rem #fff;
       transform: translateY(0.2rem); }
-    .navigation__link:active {
+    .header__link:active {
       box-shadow: 0 0 #fff;
       transform: translateY(0.3rem); }
-    .navigation__link--about {
+    .header__link--about {
       background-color: #b953ff; }
-    .navigation__link--projects {
+    .header__link--projects {
       background-color: #4452fb; }
-    .navigation__link--contact {
+    .header__link--contact {
       background-color: #16e0bd; }
   @media only screen and (max-width: 56.25em) {
-    .navigation {
+    .header {
       width: 100%; } }
   @media only screen and (max-width: 37.5em) {
-    .navigation {
+    .header {
       width: 100%; } }
-
-@media (max-width: 500px) {
-  header {
+  .header__main-container {
+    display: flex;
     flex-direction: column;
     align-items: center; }
-  .nav__link {
-    margin: 1rem 0; } }
+  .header .special-bg {
+    background-image: linear-gradient(90deg, #16e0bd, #b953ff);
+    padding: 0 1rem;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; }
+    @media only screen and (max-width: 37.5em) {
+      .header .special-bg {
+        padding: 0; } }
+  .header__image-container {
+    display: flex;
+    justify-content: center; }
+  .header__hero-image {
+    position: absolute;
+    bottom: 3rem;
+    max-width: 90%;
+    height: auto; }
 
 /* About Me */
 .about-me {
