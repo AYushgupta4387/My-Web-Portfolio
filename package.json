@@ -4,7 +4,7 @@
   "description": "My Portfolio project for QSTP. This is project 1",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w" 
+    "watch:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "author": "Ayush Gupta",
   "license": "ISC",
