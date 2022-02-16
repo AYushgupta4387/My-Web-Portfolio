@@ -59,6 +59,7 @@
             border: 2px solid $clr-3;
             border-radius: 2rem;
         }
+
     }
 
     &__text-container {
@@ -76,6 +77,7 @@
 
         @include respond(tab-port) {
             width: 60%;
+            order: -1;
         }
     }
 
@@ -87,11 +89,14 @@
 
 /* Contact Me */
 .contact-me {
+    height: 100vh;
     display: flex;
     justify-content: center;
 
     @include respond(phone) {
-        display: block;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0 !important;
     }
 
     &__container {

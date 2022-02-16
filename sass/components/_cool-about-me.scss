@@ -5,9 +5,10 @@
         position: relative;
         padding-left: 3rem;
         text-align: left;
+        font-size: 2rem;
 
         &:not(:last-child) {
-            padding-bottom: 3rem;
+            padding-bottom: 1rem;
             border-left: 3px solid $clr-2-1;
 
             @include respond(phone) {
@@ -45,7 +46,7 @@
     }
 
     &__text-box {
-        margin: 3rem 0 0 3rem;
+        margin: 2rem 0 0 3rem;
 
         @include respond(phone) {
             margin: 2rem 0 0 2rem;

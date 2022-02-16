@@ -55,6 +55,10 @@
         font-weight: 200;
         max-width: 50rem;
         text-align: center;
+
+        @include respond(phone) {
+            margin-top: 5rem;
+          }
     }
 
     &--my-projects {

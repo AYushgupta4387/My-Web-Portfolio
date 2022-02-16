@@ -73,6 +73,9 @@ body {
   font-weight: 200;
   max-width: 50rem;
   text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .paragraph--header {
+      margin-top: 5rem; } }
 
 .paragraph--my-projects {
   text-align: justify; }
@@ -147,9 +150,10 @@ body {
 .cool-about-me__text-container {
   position: relative;
   padding-left: 3rem;
-  text-align: left; }
+  text-align: left;
+  font-size: 2rem; }
   .cool-about-me__text-container:not(:last-child) {
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
     border-left: 3px solid #faeaa9; }
     @media only screen and (max-width: 37.5em) {
       .cool-about-me__text-container:not(:last-child) {
@@ -177,7 +181,7 @@ body {
   margin-bottom: 1rem; }
 
 .cool-about-me__text-box {
-  margin: 3rem 0 0 3rem; }
+  margin: 2rem 0 0 3rem; }
   @media only screen and (max-width: 37.5em) {
     .cool-about-me__text-box {
       margin: 2rem 0 0 2rem; } }
@@ -219,7 +223,7 @@ body {
   position: absolute;
   left: var(--left);
   content: "Hey there! I am Ayush!";
-  font-size: 96px;
+  font-size: 9.6rem;
   width: max-content;
   color: hsl(var(--hue), 75%, 75%); }
 
@@ -465,13 +469,15 @@ body {
     margin: 4rem 0; }
     @media only screen and (max-width: 56.25em) {
       .my-projects__image-container {
-        width: 60%; } }
+        width: 60%;
+        order: -1; } }
   .my-projects__image {
     max-width: 100%;
     height: auto; }
 
 /* Contact Me */
 .contact-me {
+  height: 100vh;
   display: flex;
   justify-content: center;
   /*
@@ -545,7 +551,9 @@ body {
 */ }
   @media only screen and (max-width: 37.5em) {
     .contact-me {
-      display: block; } }
+      display: flex;
+      align-items: center;
+      margin-bottom: 0 !important; } }
   .contact-me__container {
     display: flex;
     justify-content: space-around;
