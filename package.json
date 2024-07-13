@@ -1,14 +1,16 @@
 {
-  "name": "mini_project_1_web_portfolio",
+  "name": "my-web-portfolio",
   "version": "1.0.0",
-  "description": "My Portfolio project for QSTP. This is project 1",
+  "description": "My website",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ayush Gupta",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^6.0.1"
+    "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.77.8"
   }
 }
