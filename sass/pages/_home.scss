@@ -30,61 +30,158 @@
 /* My Projects */
 .my-projects {
     text-align: center;
+    background-color: rgb(16, 16, 16);
 
     &__container {
+        margin: 0 auto;
+        max-width: 1200px;
         display: flex;
-        flex-direction: column;
-    }
-
-    &__project {
-        display: flex;
-        justify-content: space-evenly;
         align-items: center;
-        margin-bottom: 3rem;
-
-        &:nth-child(odd) {
-            padding-bottom: 2rem;
-        }
-
-        &:not(:last-child) {
-            margin-bottom: 6rem;
-        }
-
-        @include respond(tab-port) {
-            flex-direction: column;
-        }
 
         @include respond(phone) {
-            margin: 1rem;
-            border: 2px solid $clr-3;
-            border-radius: 2rem;
-        }
-
-    }
-
-    &__text-container {
-        width: 40%;
-        text-align: left;
-
-        @include respond(tab-port) {
-            width: 80%;
+            flex-direction: column;
+            align-items: center;
         }
     }
 
-    &__image-container {
-        width: 30%;
-        margin: 4rem 0;
+    .projects-tabs {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        margin-left: 2rem;
 
-        @include respond(tab-port) {
-            width: 60%;
-            order: -1;
+        @include respond(phone) {
+            flex-direction: row;
+            width: auto;
+            padding: 0 1rem;
+            margin-bottom: 2rem;
+            margin-left: 0;
+            gap: 1rem;
+            overflow-x: scroll;
+            max-width: 100%;
         }
     }
 
-    &__image {
-        max-width: 100%;
-        height: auto;
+    .project-tab {
+        background: transparent;
+        color: $clr-3;
+        border: 2px solid $clr-3;
+        border-radius: 10px;
+        padding: 1rem 2rem;
+        margin-bottom: 1rem;
+        cursor: pointer;
     }
+
+    .project-tab:hover {
+        background-color: $clr-3;
+        color: white;
+        scale: 1.05;
+    }
+
+    .project-display {
+        width: 75%;
+        margin: 0 2rem;
+        padding: 1rem;
+        border: 2px solid $clr-3;
+
+        img {
+            width: 68%;
+            margin: 2rem 0;
+            border-radius: 10px;
+
+            @include respond(phone) {
+                width: 90%;
+            }
+        }
+
+        .details {
+            font-size: 2rem;
+            font-family: $ff-secondary;
+            display: flex;
+
+            @include respond(phone) {
+                flex-direction: column;
+            }
+
+            .description {
+                text-align: justify;
+                font-weight: 600;
+                margin: 1rem;
+            }
+
+            .attributes {
+                margin: 1rem;
+                font-size: 2rem;
+
+                .attribute {
+                    border: 2px solid complement($color: $clr-3);
+                    padding: 1rem;
+                    color: complement($color: $clr-3);
+                    border-radius: 10px;
+                }
+
+                .attribute:hover {
+                    cursor: pointer;
+                    background-color: complement($color: $clr-3);
+                    color: black;
+                }
+
+                .github {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+
+    // &__project {
+    //     display: flex;
+    //     justify-content: space-evenly;
+    //     align-items: center;
+    //     margin-bottom: 3rem;
+
+    //     &:nth-child(odd) {
+    //         padding-bottom: 2rem;
+    //     }
+
+    //     &:not(:last-child) {
+    //         margin-bottom: 6rem;
+    //     }
+
+    //     @include respond(tab-port) {
+    //         flex-direction: column;
+    //     }
+
+    //     @include respond(phone) {
+    //         margin: 1rem;
+    //         border: 2px solid $clr-3;
+    //         border-radius: 2rem;
+    //     }
+
+    // }
+
+    // &__text-container {
+    //     width: 40%;
+    //     text-align: left;
+
+    //     @include respond(tab-port) {
+    //         width: 80%;
+    //     }
+    // }
+
+    // &__image-container {
+    //     width: 30%;
+    //     margin: 4rem 0;
+
+    //     @include respond(tab-port) {
+    //         width: 60%;
+    //         order: -1;
+    //     }
+    // }
+
+    // &__image {
+    //     max-width: 100%;
+    //     height: auto;
+    // }
 }
 
 /* Contact Me */
@@ -208,4 +305,10 @@
         font-family: $ff-primary;
     } 
 */
+}
+
+.active-project-tab {
+    background: $clr-3 !important;
+    color: white !important;
+    scale: 1.05;
 }

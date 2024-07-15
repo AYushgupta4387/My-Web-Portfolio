@@ -317,6 +317,7 @@ body {
 .cool-about-me__exp-box .company-box .date {
   max-width: 30%;
   font-size: 2rem;
+  text-align: center;
 }
 .cool-about-me__exp-box .work-details {
   font-family: "Open Sans", sans-serif;
@@ -643,57 +644,100 @@ body {
 /* My Projects */
 .my-projects {
   text-align: center;
+  background-color: rgb(16, 16, 16);
 }
 .my-projects__container {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .my-projects__container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.my-projects .projects-tabs {
   display: flex;
   flex-direction: column;
+  width: 25%;
+  margin-left: 2rem;
 }
-.my-projects__project {
+@media only screen and (max-width: 37.5em) {
+  .my-projects .projects-tabs {
+    flex-direction: row;
+    width: auto;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    margin-left: 0;
+    gap: 1rem;
+    overflow-x: scroll;
+    max-width: 100%;
+  }
+}
+.my-projects .project-tab {
+  background: transparent;
+  color: #4452fb;
+  border: 2px solid #4452fb;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.my-projects .project-tab:hover {
+  background-color: #4452fb;
+  color: white;
+  scale: 1.05;
+}
+.my-projects .project-display {
+  width: 75%;
+  margin: 0 2rem;
+  padding: 1rem;
+  border: 2px solid #4452fb;
+}
+.my-projects .project-display img {
+  width: 68%;
+  margin: 2rem 0;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 37.5em) {
+  .my-projects .project-display img {
+    width: 90%;
+  }
+}
+.my-projects .project-display .details {
+  font-size: 2rem;
+  font-family: "Open Sans", sans-serif;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 3rem;
 }
-.my-projects__project:nth-child(odd) {
-  padding-bottom: 2rem;
-}
-.my-projects__project:not(:last-child) {
-  margin-bottom: 6rem;
-}
-@media only screen and (max-width: 56.25em) {
-  .my-projects__project {
+@media only screen and (max-width: 37.5em) {
+  .my-projects .project-display .details {
     flex-direction: column;
   }
 }
-@media only screen and (max-width: 37.5em) {
-  .my-projects__project {
-    margin: 1rem;
-    border: 2px solid #4452fb;
-    border-radius: 2rem;
-  }
+.my-projects .project-display .details .description {
+  text-align: justify;
+  font-weight: 600;
+  margin: 1rem;
 }
-.my-projects__text-container {
-  width: 40%;
-  text-align: left;
+.my-projects .project-display .details .attributes {
+  margin: 1rem;
+  font-size: 2rem;
 }
-@media only screen and (max-width: 56.25em) {
-  .my-projects__text-container {
-    width: 80%;
-  }
+.my-projects .project-display .details .attributes .attribute {
+  border: 2px solid #fbed44;
+  padding: 1rem;
+  color: #fbed44;
+  border-radius: 10px;
 }
-.my-projects__image-container {
-  width: 30%;
-  margin: 4rem 0;
+.my-projects .project-display .details .attributes .attribute:hover {
+  cursor: pointer;
+  background-color: #fbed44;
+  color: black;
 }
-@media only screen and (max-width: 56.25em) {
-  .my-projects__image-container {
-    width: 60%;
-    order: -1;
-  }
-}
-.my-projects__image {
-  max-width: 100%;
-  height: auto;
+.my-projects .project-display .details .attributes .github {
+  margin-bottom: 2rem;
 }
 
 /* Contact Me */
@@ -806,4 +850,10 @@ body {
 .contact-me__icon {
   color: #fff;
   padding: 1rem;
+}
+
+.active-project-tab {
+  background: #4452fb !important;
+  color: white !important;
+  scale: 1.05;
 }
