@@ -1,3 +1,5 @@
+@use "sass:math";
+
 body {
     perspective: 500px;
     perspective-origin: 50% calc(50% - 150px);
@@ -44,8 +46,8 @@ $width: 50px;
 @for $i from 0 to 24 {
     .panel:nth-child(#{$i + 1}) {
         --left: #{$width * $i * -1};
-        --hue: #{360 / 24 * $i};
-        --angle: #{360deg / 24 * $i};
+        --hue: #{math.div(360, 24) * $i};
+        --angle: #{math.div(360deg, 24) * $i};
     }
 }
 
