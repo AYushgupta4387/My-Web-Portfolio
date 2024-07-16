@@ -209,7 +209,6 @@ body {
 
 .cool-about-me {
   /* SKILLS */
-  /* EXPERIENCE */
 }
 .cool-about-me__text-container {
   position: relative;
@@ -296,41 +295,6 @@ body {
 }
 .cool-about-me__skill--novice {
   background-color: #4452fb;
-}
-.cool-about-me__exp-container {
-  padding: 1rem;
-}
-.cool-about-me__exp-box {
-  margin-bottom: 4rem;
-}
-.cool-about-me__exp-box .company-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-}
-.cool-about-me__exp-box .company-box .company {
-  font-size: 2.4rem;
-  padding: 1rem;
-  border-radius: 5px;
-}
-.cool-about-me__exp-box .company-box .date {
-  max-width: 30%;
-  font-size: 2rem;
-  text-align: center;
-}
-.cool-about-me__exp-box .work-details {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-  max-width: 400px;
-}
-@media only screen and (max-width: 37.5em) {
-  .cool-about-me__exp-box .work-details {
-    max-width: 300px;
-  }
-}
-.cool-about-me__exp-box .work-details li {
-  margin-bottom: 1rem;
 }
 .cool-about-me__clr-advanced {
   color: #16e0bd;
@@ -619,32 +583,54 @@ body {
 }
 .about-me__container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  gap: 5rem;
+  margin: 0 5rem;
+  /* EXPERIENCE */
 }
 @media only screen and (max-width: 56.25em) {
   .about-me__container {
     flex-direction: column;
+    margin: 0;
   }
 }
-.about-me__image-container {
-  width: 40%;
+.about-me__container .exp-container {
+  width: 70%;
+  align-self: flex-start;
 }
 @media only screen and (max-width: 56.25em) {
-  .about-me__image-container {
-    width: 60%;
-    margin-bottom: 4rem;
+  .about-me__container .exp-container {
+    width: 90%;
+    align-self: center;
   }
 }
-.about-me__image {
-  max-width: 100%;
-  height: auto;
+.about-me__container .experience-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.about-me__container .experience-tab {
+  background: transparent;
+  color: #4452fb;
+  border: 2px solid #4452fb;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 2.4rem;
+}
+.about-me__container .experience-tab:hover {
+  background-color: #4452fb;
+  color: white;
 }
 
 /* My Projects */
 .my-projects {
   text-align: center;
   background-color: rgb(16, 16, 16);
+  padding: 5rem 0;
 }
 .my-projects__container {
   margin: 0 auto;
@@ -684,11 +670,11 @@ body {
   padding: 1rem 2rem;
   margin-bottom: 1rem;
   cursor: pointer;
+  font-size: 2.4rem;
 }
 .my-projects .project-tab:hover {
   background-color: #4452fb;
   color: white;
-  scale: 1.05;
 }
 .my-projects .project-display {
   width: 75%;
@@ -714,16 +700,29 @@ body {
 @media only screen and (max-width: 37.5em) {
   .my-projects .project-display .details {
     flex-direction: column;
+    align-items: center;
   }
 }
 .my-projects .project-display .details .description {
   text-align: justify;
   font-weight: 600;
   margin: 1rem;
+  width: 75%;
+}
+@media only screen and (max-width: 37.5em) {
+  .my-projects .project-display .details .description {
+    width: 90%;
+  }
 }
 .my-projects .project-display .details .attributes {
   margin: 1rem;
   font-size: 2rem;
+  width: 20%;
+}
+@media only screen and (max-width: 37.5em) {
+  .my-projects .project-display .details .attributes {
+    width: 90%;
+  }
 }
 .my-projects .project-display .details .attributes .attribute {
   border: 2px solid #fbed44;
@@ -855,5 +854,4 @@ body {
 .active-project-tab {
   background: #4452fb !important;
   color: white !important;
-  scale: 1.05;
 }

@@ -1,0 +1,121 @@
+ <div class="cool-about-me__text-container">
+    <div
+        class="cool-about-me__circle cool-about-me__circle--2"
+    ></div>
+    <div class="u-flex-center">
+        <h2
+            class="heading-secondary heading-secondary--cool-about-me"
+        >
+            Experience
+        </h2>
+    </div>
+    <div class="cool-about-me__text-box">
+        <div class="cool-about-me__exp-container">
+            <div class="cool-about-me__exp-box">
+                <div class="company-box">
+                    <p
+                        class="company btn btn--hg"
+                        onclick="toggleDetails(1)"
+                    >
+                        Zapcom Solutions
+                    </p>
+                    <p class="date">July 2023 - Present</p>
+                </div>
+                <div
+                    class="work-details hidden"
+                    id="zapcom-details"
+                >
+                    <ul>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cool-about-me__exp-box">
+                <div class="company-box">
+                    <p
+                        class="company btn btn--hg"
+                        onclick="toggleDetails(2)"
+                    >
+                        KNOLSKAPE Solutions
+                    </p>
+                    <p class="date"></p>
+                </div>
+                <div
+                    class="work-details hidden"
+                    id="knolskape-details"
+                >
+                    <ul>
+                       
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cool-about-me__exp-box">
+                <div class="company-box">
+                    <p
+                        class="company btn btn--hg"
+                        onclick="toggleDetails(3)"
+                    >
+                        CuriousJr
+                    </p>
+                    <p class="date"></p>
+                </div>
+                <div
+                    class="work-details hidden"
+                    id="curiousJr-details"
+                >
+                    <ul>
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- <ul>
+            <li class="cool-about-me__text">Web-Development</li>
+            <li class="cool-about-me__text">Working towards environment protection</li>
+        </ul> -->
+    </div>
+    <!-- /cool-about-me__text -->
+</div>
+
+
+.exp-box {
+    margin-bottom: 4rem;
+
+    .company-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+        .company {
+            font-size: 2.4rem;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        .date {
+            max-width: 30%;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+
+    .work-details {
+        font-family: $ff-secondary;
+        font-weight: $fw-light;
+        max-width: 400px;
+
+        @include respond(phone) {
+            max-width: 300px;
+        }
+
+        li {
+            margin-bottom: 1rem;
+        }
+    }
+}

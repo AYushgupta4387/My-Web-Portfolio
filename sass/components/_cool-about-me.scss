@@ -101,49 +101,6 @@
         }
     }
 
-    /* EXPERIENCE */
-
-    &__exp-container {
-        padding: 1rem;
-    }
-
-    &__exp-box {
-        margin-bottom: 4rem;
-
-        .company-box {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 2rem;
-
-            .company {
-                font-size: 2.4rem;
-                padding: 1rem;
-                border-radius: 5px;
-            }
-
-            .date {
-                max-width: 30%;
-                font-size: 2rem;
-                text-align: center;
-            }
-        }
-
-        .work-details {
-            font-family: $ff-secondary;
-            font-weight: $fw-light;
-            max-width: 400px;
-
-            @include respond(phone) {
-                max-width: 300px;
-            }
-
-            li {
-                margin-bottom: 1rem;
-            }
-        }
-    }
-
     &__clr-advanced {
         color: $clr-1;
     }
